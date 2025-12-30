@@ -1,0 +1,45 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Alfresco Rhino Web Script",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"match": "\\bmodel\\b",
+			"name": "variable.other.rhino.model"
+		},
+		{
+			"match": "<import\\s+([a-zA-Z_][a-zA-Z0-9_.]*)",
+			"name": "keyword.control.rhino.import"
+		},
+		{
+			"include": "source.js"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.alfresco-rhino",
+					"match": "\\b(if|while|for|return)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.alfresco-rhino",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.alfresco-rhino",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.alfresco.rhino"
+}

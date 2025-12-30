@@ -1,0 +1,44 @@
+{
+  "name": "alfresco-rhino",
+  "displayName": "Alfresco 6.2 Rhino Web Script",
+  "description": "Provides basic syntax highlighting for Rhino files used for Web Scripts in Alfresco 6.2.",
+  "icon": "images/icon.png",
+  "version": "0.1.0",
+  "publisher": "TwistZero",
+  "engines": {
+    "vscode": "^1.107.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "alfresco",
+    "rhino",
+    "webscript",
+    "javascript"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "alfresco-rhino",
+        "aliases": [
+          "Rhino",
+          "alfresco-rhino"
+        ],
+        "extensions": [
+          ".lib.js",
+          ".get.js",
+          ".post.json.js"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "alfresco-rhino",
+        "scopeName": "source.alfresco.rhino",
+        "path": "./syntaxes/alfresco-rhino.tmLanguage.json"
+      }
+    ]
+  }
+}
